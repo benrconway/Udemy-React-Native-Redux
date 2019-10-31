@@ -9,7 +9,7 @@ import LibraryList from './src/components/LibraryList';
 const App = () => {
   return (
     <Provider store={createStore(reducers)}>
-      <SafeAreaView>
+      <SafeAreaView style={styles.containerStyle}>
         <Header headerText="TechStack App" />
         <LibraryList />
       </SafeAreaView>
@@ -17,6 +17,10 @@ const App = () => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  containerStyle: {
+    flex: 1,
+  }
+});
 
 export default App;
